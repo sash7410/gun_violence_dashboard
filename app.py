@@ -48,6 +48,8 @@ app.layout = create_layout(app)
 # Register callbacks
 register_callbacks(app)
 
-# Run the app
+# Expose the underlying Flask server for deployment
+server = app.server
+
 if __name__ == '__main__':
     app.run_server(debug=True)
